@@ -46,7 +46,7 @@ export const LoginWithEmail = () => {
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" {...register('email')} placeholder='email' />
                 <ErrorFormMessage formState={formState} name='email' />
-                <input type="text" {...register('password')} placeholder='password' />
+                <input type="password" {...register('password')} placeholder='password' />
                 <ErrorFormMessage formState={formState} name='password' />
                 <button type="submit">Submit</button>
                 {errors && <p>{errors}</p>}

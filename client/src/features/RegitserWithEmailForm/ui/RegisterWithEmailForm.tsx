@@ -39,7 +39,7 @@ export const RegisterWithEmailForm = () => {
                 <ErrorFormMessage formState={formState} name='email' />
                 <input type="text" {...register('username')} placeholder='username' />
                 <ErrorFormMessage formState={formState} name='username' />
-                <input type="text" {...register('password')} placeholder='password' />
+                <input type="password" {...register('password')} placeholder='password' />
                 <ErrorFormMessage formState={formState} name='password' />
                 <button type="submit">Submit</button>
             </form>
