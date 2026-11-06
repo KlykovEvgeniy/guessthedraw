@@ -1,0 +1,12 @@
+.nav__link {
+    color: black;
+    text-decoration: none;
+}
+
+.nav__link_active {
+    color: red;
+}
+
+li {
+    list-style-type: none;
+}

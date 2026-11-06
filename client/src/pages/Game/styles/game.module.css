@@ -1,0 +1,107 @@
+.gamePage {
+    max-width: 1160px;
+    min-height: calc(100vh - 76px);
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+    color: #302a25;
+}
+
+.gamePage > h1 {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    margin-bottom: 20px;
+    padding: 7px 15px;
+    border: 1.5px solid #e8dcc7;
+    border-radius: 10px 8px 11px 9px;
+    background: #fff4d8;
+    box-shadow: 2px 3px 0 #eee4d5;
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+    font-weight: 850;
+    overflow-wrap: anywhere;
+}
+
+.gamePage > :global(.game-screen),
+.gamePage > :global(div) {
+    padding: 20px;
+    border: 1.5px solid #e8dcc7;
+    border-radius: 13px 10px 14px 11px;
+    background: #fffefa;
+    box-shadow: 3px 4px 0 #eee4d5;
+}
+
+.gamePage > :global(.game-screen) > :global(p) {
+    margin-bottom: 12px;
+    color: #746b61;
+    font-size: 0.9rem;
+}
+
+.gamePage :global(h2) {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.gamePage :global(button) {
+    min-height: 40px;
+    padding: 8px 13px;
+    border: 1.5px solid #302a25;
+    border-radius: 8px 7px 9px 7px;
+    background: #f4c85f;
+    box-shadow: 2px 2px 0 #302a25;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.gamePage :global(button:hover:not(:disabled)) {
+    background: #ffd879;
+}
+
+.gamePage :global(button:disabled) {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.gamePage :global(.game-screen ul) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0;
+}
+
+.gamePage :global(.game-screen li) {
+    padding: 6px 10px;
+    border: 1px solid #e8dcc7;
+    border-radius: 999px;
+    background: #fffaf0;
+}
+
+.gamePage > :global(div) > :global(div) {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(270px, 0.8fr);
+    align-items: start;
+    gap: 20px;
+}
+
+.gamePage :global(canvas) {
+    width: 100%;
+}
+
+.gamePage :global(.chat-list),
+.gamePage :global(ul[class*="list"]) {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+@media (max-width: 760px) {
+    .gamePage {
+        padding: 24px 16px 42px;
+    }
+
+    .gamePage > :global(div) {
+        padding: 15px;
+    }
+
+    .gamePage > :global(div) > :global(div) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

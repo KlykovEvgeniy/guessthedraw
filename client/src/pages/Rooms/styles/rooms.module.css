@@ -1,0 +1,136 @@
+.roomsPage {
+    --ink: #302a25;
+    --muted: #746b61;
+    max-width: 1080px;
+    min-height: calc(100vh - 76px);
+    margin: 0 auto;
+    padding: 38px 24px 70px;
+    color: var(--ink);
+}
+
+.roomsIntro {
+    margin-bottom: 25px;
+}
+
+.roomsIntro > span {
+    color: #a17b48;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.roomsIntro h1 {
+    margin-top: 3px;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 1.15;
+}
+
+.roomsIntro p {
+    margin-top: 5px;
+    color: var(--muted);
+}
+
+.roomActions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.actionCard,
+.publicRooms {
+    padding: 20px;
+    border: 1.5px solid #e8dcc7;
+    border-radius: 13px 10px 14px 11px;
+    background: #fffefa;
+    box-shadow: 3px 4px 0 #eee4d5;
+}
+
+.actionCard h2 {
+    margin-bottom: 11px;
+    font-size: 1.15rem;
+}
+
+.actionCard :global(h1) {
+    margin-bottom: 11px;
+    font-size: 1.15rem;
+    letter-spacing: normal;
+}
+
+.actionCard :global(form) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.actionCard :global(input:not([type="checkbox"])) {
+    min-height: 43px;
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid #d8cbb8;
+    border-radius: 8px;
+    background: #fffdf8;
+    font-size: 0.95rem;
+}
+
+.actionCard :global(input:focus) {
+    border-color: #71947a;
+    outline: 3px solid rgb(113 148 122 / 20%);
+}
+
+.actionCard :global(button),
+.publicRooms :global(button) {
+    min-height: 42px;
+    padding: 9px 14px;
+    border: 1.5px solid var(--ink);
+    border-radius: 8px 7px 9px 7px;
+    background: #f4c85f;
+    box-shadow: 2px 2px 0 var(--ink);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.actionCard :global(button:hover),
+.publicRooms :global(button:hover) {
+    background: #ffd879;
+}
+
+.actionCard :global(label) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.publicRooms {
+    margin-top: 22px;
+}
+
+.publicRooms :global(h1) {
+    font-size: 1.45rem;
+    letter-spacing: -0.035em;
+}
+
+.publicRooms :global(h3) {
+    margin-top: 14px;
+    color: var(--muted);
+}
+
+@media (max-width: 640px) {
+    .roomsPage {
+        padding: 28px 16px 48px;
+    }
+
+    .roomActions {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .actionCard,
+    .publicRooms {
+        padding: 16px;
+    }
+}

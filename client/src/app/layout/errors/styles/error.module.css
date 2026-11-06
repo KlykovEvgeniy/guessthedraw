@@ -1,0 +1,23 @@
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.not-found {
+    display: grid;
+    min-height: calc(100vh - 76px);
+    place-items: center;
+    padding: 24px;
+    color: #302a25;
+    text-align: center;
+}
+
+.not-found h1 {
+    padding: 26px 32px;
+    border: 1.5px solid #e8dcc7;
+    border-radius: 14px 10px 15px 11px;
+    background: #fffefa;
+    box-shadow: 5px 6px 0 #eadfcf;
+    font-size: clamp(1.7rem, 5vw, 2.7rem);
+    letter-spacing: -0.05em;
+}

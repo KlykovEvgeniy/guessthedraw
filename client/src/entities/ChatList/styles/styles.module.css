@@ -1,0 +1,17 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 12px;
+    border: 1px solid #e8dcc7;
+    border-radius: 9px;
+    background: #fffaf0;
+}
+
+.list span {
+    color: #52775d;
+    margin-right: 5px;
+    font-weight: 800;
+}

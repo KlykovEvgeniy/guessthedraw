@@ -1,0 +1,35 @@
+.header {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    padding: 14px clamp(20px, 5vw, 64px);
+    border-bottom: 1px solid #e8dcc7;
+    background: #fffaf0;
+    box-shadow: 0 3px 0 rgb(48 42 37 / 4%);
+}
+
+.header > a {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #302a25;
+    font-size: 1.45rem;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .header {
+        gap: 12px;
+        padding: 12px 18px;
+    }
+
+    .header > a {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form input {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.form button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

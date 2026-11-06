@@ -1,0 +1,220 @@
+.drawMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #302a25;
+}
+
+.roundInfo {
+    padding: 16px 18px;
+    border: 1.5px solid #e8dcc7;
+    border-radius: 12px 9px 13px 10px;
+    background: #fffaf0;
+}
+
+.roundHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.roundNumber {
+    color: #746b61;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.timer {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 92px;
+    justify-content: center;
+    padding: 6px 12px;
+    border: 1.5px solid #9dbb91;
+    border-radius: 10px 8px 11px 9px;
+    background: #edf5e8;
+    color: #45684f;
+    font-variant-numeric: tabular-nums;
+    font-size: 1.2rem;
+    font-weight: 900;
+    box-shadow: 2px 2px 0 #d9e7d2;
+}
+
+.timerIcon {
+    font-size: 1.1rem;
+}
+
+.timerUrgent {
+    border-color: #db8d79;
+    background: #fff0e9;
+    color: #b94c3e;
+    box-shadow: 2px 2px 0 #f1d2c8;
+    animation: timer-pulse 900ms ease-in-out infinite alternate;
+}
+
+.timerTrack {
+    height: 9px;
+    margin-top: 12px;
+    overflow: hidden;
+    border: 1px solid #e2d6c3;
+    border-radius: 999px;
+    background: #f0e9dc;
+}
+
+.timerProgress {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: #82a681;
+    transition: width 250ms linear;
+}
+
+.timerProgressUrgent {
+    background: #df8069;
+}
+
+.wordHint,
+.wordPrompt {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.wordHintLabel {
+    color: #746b61;
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.letterSlots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.letterSlot {
+    display: grid;
+    width: 28px;
+    height: 34px;
+    place-items: center;
+    border-bottom: 3px solid #8a795f;
+    color: #52775d;
+    font-size: 1.15rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.waitingWord {
+    color: #746b61;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.wordPrompt {
+    display: block;
+    padding: 9px 12px;
+    border: 1px dashed #d7bd75;
+    border-radius: 8px;
+    background: #fff4d8;
+    color: #746b61;
+    font-size: 0.9rem;
+}
+
+.wordPrompt strong {
+    margin-left: 5px;
+    color: #302a25;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+}
+
+.roundMessage {
+    padding: 10px 12px;
+    border: 1px solid #c8d8be;
+    border-radius: 8px;
+    background: #edf5e8;
+    color: #45684f;
+    font-weight: 750;
+}
+
+.gameColumns {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(270px, 0.8fr);
+    align-items: start;
+    gap: 20px;
+}
+
+.canvasColumn,
+.sideColumn {
+    min-width: 0;
+}
+
+.sideColumn {
+    padding: 14px;
+    border: 1px solid #e8dcc7;
+    border-radius: 10px;
+    background: #fffefa;
+}
+
+.scoresHeading {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.scoreList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 14px;
+    padding: 0;
+    list-style: none;
+}
+
+.scoreList li {
+    padding: 5px 9px;
+    border: 1px solid #e8dcc7;
+    border-radius: 999px;
+    background: #fffaf0;
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+@keyframes timer-pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.04);
+    }
+}
+
+@media (max-width: 760px) {
+    .gameColumns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .roundInfo {
+        padding: 13px;
+    }
+
+    .letterSlot {
+        width: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timerUrgent {
+        animation: none;
+    }
+
+    .timerProgress {
+        transition: none;
+    }
+}

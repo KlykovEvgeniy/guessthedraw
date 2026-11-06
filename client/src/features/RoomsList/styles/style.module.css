@@ -1,0 +1,60 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 12px;
+    padding: 14px 15px;
+    border: 1px solid #e8dcc7;
+    border-radius: 10px 8px 11px 9px;
+    background: #fffaf0;
+}
+
+.item p {
+    overflow-wrap: anywhere;
+}
+
+.item span {
+    color: #746b61;
+    font-size: 0.9rem;
+}
+
+.joinButton {
+    flex-shrink: 0;
+    padding: 8px 13px;
+    border: 1.5px solid #302a25;
+    border-radius: 8px;
+    background: #b7d0ac;
+    box-shadow: 2px 2px 0 #302a25;
+    color: #302a25;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.joinButton:hover {
+    background: #c9dfbd;
+}
+
+.rooms {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.rooms button {
+    padding: 8px 13px;
+}
+
+@media (max-width: 480px) {
+    .item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .joinButton {
+        width: 100%;
+        text-align: center;
+    }
+}

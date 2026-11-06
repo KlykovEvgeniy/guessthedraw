@@ -1,0 +1,126 @@
+.dashboard {
+    max-width: 820px;
+    min-height: calc(100vh - 76px);
+    margin: 0 auto;
+    padding: 42px 24px 70px;
+    color: #302a25;
+}
+
+.heading {
+    margin-bottom: 24px;
+}
+
+.heading > span {
+    color: #a17b48;
+    font-size: 0.7rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+}
+
+.heading h1 {
+    margin-top: 3px;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 1.15;
+}
+
+.heading p {
+    margin-top: 5px;
+    color: #746b61;
+}
+
+.leaderboard {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: player-rank;
+}
+
+.player {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 66px;
+    padding: 10px 16px;
+    border: 1.5px solid #e8dcc7;
+    border-radius: 12px 9px 13px 10px;
+    background: #fffefa;
+    box-shadow: 2px 3px 0 #eee4d5;
+}
+
+.player:nth-child(1) {
+    border-color: #e6ca82;
+    background: #fff8df;
+}
+
+.rank {
+    display: grid;
+    width: 37px;
+    height: 37px;
+    place-items: center;
+    border: 1.5px solid #302a25;
+    border-radius: 50%;
+    background: #f4c85f;
+    font-weight: 900;
+    transform: rotate(-7deg);
+}
+
+.player:nth-child(2) .rank {
+    background: #d7d4ca;
+}
+
+.player:nth-child(3) .rank {
+    background: #e8b99a;
+}
+
+.username {
+    overflow: hidden;
+    font-weight: 800;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.points {
+    padding: 5px 10px;
+    border: 1px solid #c8d8be;
+    border-radius: 999px;
+    background: #edf5e8;
+    color: #496d53;
+    font-size: 0.9rem;
+    font-weight: 850;
+    white-space: nowrap;
+}
+
+.status {
+    padding: 18px;
+    border: 1px dashed #d9cbb6;
+    border-radius: 10px;
+    color: #746b61;
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        padding: 30px 16px 48px;
+    }
+
+    .player {
+        grid-template-columns: 42px minmax(0, 1fr) auto;
+        gap: 8px;
+        padding: 9px 10px;
+    }
+
+    .rank {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .points {
+        padding: 4px 7px;
+        font-size: 0.8rem;
+    }
+}
